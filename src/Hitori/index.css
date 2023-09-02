@@ -1,0 +1,22 @@
+@keyframes scaleAnime {
+    from {
+        transform: scale(1.02);
+    }
+
+    50% {
+        transform: scale(0.98)
+    }
+
+    to {
+        transform: scale(1.02);
+    }
+}
+
+.scale1_2__1 {
+    transform: scale(1.3)
+}
+
+.hitori_body-breath {
+    animation: scaleAnime 1s infinite;
+    -webkit-user-drag: none;
+}
