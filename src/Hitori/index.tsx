@@ -8,7 +8,7 @@ export const Hitori = () => {
         "/hitori_daimao2.png"
     ]
     const { currentStep, toNextSteps } = useStepsArray(metronomeSrcArr)
-    const timer = useRef()
+    const timer = useRef<NodeJS.Timer>()
     useEffect(() => {
         if (!timer.current) {
             timer.current = setInterval(() => {
@@ -31,7 +31,5 @@ export const Hitori = () => {
             onMouseLeave={handleMouseLeave}
             onDrag={handleDrag}
             style={getStyle} className={[!addClass.length ? "hitori_body-breath" : "", ...addClass].join(" ")} alt="" />
-        {/* <div
-            style={{ ...getStyle, "background": "red" }}></div> */}
     </>
 }
